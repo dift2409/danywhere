@@ -8,7 +8,7 @@
     "install": "node lib/install.js"
   },
   "bin": {
-    "anywhere": "./bin/danywhere"
+    "danywhere": "./bin/danywhere"
   },
   "keywords": [
     "Static",

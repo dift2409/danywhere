@@ -1,13 +1,13 @@
 {
-  "name": "anywhere",
-  "version": "1.2.0",
+  "name": "danywhere",
+  "version": "0.0.1-1.2.0",
   "description": "Run static file server anywhere",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "anywhere": "./bin/anywhere"
+    "anywhere": "./bin/danywhere"
   },
   "keywords": [
     "Static",
@@ -15,7 +15,7 @@
     "server",
     "Assets"
   ],
-  "author": "Jackson Tian",
+  "author": "George Chung",
   "license": "MIT",
   "dependencies": {
     "connect": "3.1.1",
@@ -25,10 +25,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/JacksonTian/anywhere.git"
+    "url": "git://github.com/Gerhut/danywhere.git"
   },
   "bugs": {
-    "url": "https://github.com/JacksonTian/anywhere/issues"
+    "url": "https://github.com/Gerhut/danywhere/issues"
   },
-  "homepage": "https://github.com/JacksonTian/anywhere"
+  "homepage": "https://github.com/Gerhut/danywhere"
 }

@@ -1,37 +1,37 @@
-Anywhere 随启随用的静态文件服务器
+Danywhere 随启随用的静态文件服务器
 ==============================
 
 Running static file server anywhere. 随时随地将你的当前目录变成一个静态文件服务器的根目录。
 
 ## Installation
 ```
-npm install anywhere -g
+npm install danywhere -g
 ```
 
 ## Execution
 ```
-$ anywhere
+$ danywhere
 // or with port
-$ anywhere -p 8000
+$ danywhere -p 8000
 // or start it but silent(don't open browser)
-$ anywhere -s
+$ danywhere -s
 // or with hostname
-$ anywhere -h localhost -p 8888
+$ danywhere -h localhost -p 8888
 // or with folder
-$ anywhere -d ~/git/anywhere
+$ danywhere -d ~/git/danywhere
 ```
 
 ## Help
 ```
-$ anywhere --help
+$ danywhere --help
 Usage:
-  anywhere --help // print help information
-  anywhere // 8000 as default port, current folder as root
-  anywhere 8888 // 8888 as port
-  anywhere -p 8989 // 8989 as port
-  anywhere -s // don't open browser
-  anywhere -h localhost // localhost as hostname
-  anywhere -d /home // /home as root
+  danywhere --help // print help information
+  danywhere // 8000 as default port, current folder as root
+  danywhere 8888 // 8888 as port
+  danywhere -p 8989 // 8989 as port
+  danywhere -s // don't open browser
+  danywhere -h localhost // localhost as hostname
+  danywhere -d /home // /home as root
 ```
 
 ## Visit

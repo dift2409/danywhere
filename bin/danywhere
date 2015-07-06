@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 var os = require('os');
+var path = require('path');
 var connect = require('connect');
 var serveStatic = require('serve-static');
 var serveIndex = require('serve-index');
+var serveUpload = require('serve-upload');
 
 var exec = require('child_process').exec;
 var spawn = require('child_process').spawn;
@@ -75,8 +77,18 @@ app.use(function (req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   next();
 });
+void function (middleware, query) {
+  app.use(function (req, res, next) {
+    var url = req.url;
+    if (url.substring(url.length - query.length) == query) {
+      return middleware(req, res, next);
+    } else {
+      return next();
+    }
+  });
+} (serveUpload(argv.dir), '?upload');
 app.use(serveStatic(argv.dir, {'index': ['index.html']}));
-app.use(serveIndex(argv.dir, {'icons': true}));
+app.use(serveIndex(argv.dir, {'icons': true, 'template': path.join(__dirname, '../public/template.html')}));
 // anywhere 8888
 // anywhere -p 8989
 // anywhere 8888 -s // silent
